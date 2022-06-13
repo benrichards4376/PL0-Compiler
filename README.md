@@ -16,6 +16,6 @@ Text File Example: <br />
 1 0 3 <br />
 (Note that the text file must contain only integers separated by spaces, and the total number of integers must be divisible by 3)
 
-To compile the code type gcc vm.c into the command line and hit enter. Then to run, type ./a.out followed by a space and the name of the assembly code text document as seen below.
-	Example:  $ gcc vm.c
+To compile the code type gcc vm.c into the command line and hit enter. Then to run, type ./a.out followed by a space and the name of the assembly code text document as seen below. <br />
+	Example: <br /> $ gcc vm.c <br />
 		     $ ./a.out input.txt
