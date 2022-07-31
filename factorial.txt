@@ -1,0 +1,15 @@
+var input, total, x;
+procedure factorial;
+	begin
+		total *= x;
+		x += 1;	
+	end;
+begin
+	x := 1;
+	total := 1;
+	read input;
+	while x <= input do
+		call factorial;
+
+	write total;
+end.

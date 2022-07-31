@@ -1,0 +1,13 @@
+const a := 7, b := 3;
+var z, y;
+procedure A;
+	;
+begin
+	y := 1;
+	read z;
+	if y > z then
+		write z;
+	call A;
+	while y < z do
+		y += (1 * b);
+end.

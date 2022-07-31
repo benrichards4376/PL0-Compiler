@@ -1,0 +1,9 @@
+/* Prints one if 'x' is even, or zero if 'x' is odd */
+var x;
+begin
+	read x;
+	if (x % 2) = 0 then
+		write 1
+	else
+		write 0;
+end.
