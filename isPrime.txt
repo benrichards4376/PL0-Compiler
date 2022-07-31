@@ -1,0 +1,20 @@
+/* Prints 1 if the given number is prime, otherwise it lists the factors other than 1 and itself */
+var input, x, flag;
+procedure isPrime;
+	begin
+		if (input % x) = 0 then
+			flag := 1;
+		if (input % x) = 0 then
+			write x;
+		x += 1;
+	end;
+begin
+	read input;
+	x := 2;
+	while x < input do
+		call isPrime;
+	if flag = 1 then
+		write 0
+	else
+		write 1;
+end.
