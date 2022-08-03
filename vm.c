@@ -334,12 +334,16 @@ void virtual_machine(instruction *code)
 				case 1:
 				// Prints out the value at the top of the stack
 				printf("Output result is: %d\n", pas[CPU.sp]);
+				AR[CPU.sp] = 0;
+				AR[CPU.sp - 1] = 1;
 				CPU.sp--;
 				printf("SYS  %d  %d  %s    %d  %d  %d  ", IR.l, IR.m, (IR.m > 9)? " ": "  ", CPU.pc, CPU.bp, CPU.sp);
 				break;
 				// SYS 0, 2 (READ)
 				case 2:
 				// Scans an input from the console and pushes it to the top of the stack
+				AR[CPU.sp] = 0;
+				AR[CPU.sp + 1] = 1;
 				CPU.sp++;
 				printf("Please Enter an Integer: ");
 				scanf("%d", &pas[CPU.sp]);
