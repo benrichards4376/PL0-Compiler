@@ -1,0 +1,31 @@
+Limited Grammar:
+number ::= digit {digit}.
+ident ::= letter {letter | digit}.
+digit ;;= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9“.
+letter ::= "a" | "b" | … | "y" | "z" | "A" | "B" | ... | "Y" | "Z".
+
+Example of a program written in PL/0:
+var x, w;
+begin
+   read w;
+   x:= 4;
+   if w > x then
+	w:= w + 1
+   else
+	w:= x;
+   write w;
+end. 
+
+Lexical Conventions for PL/0:
+A numerical value is assigned to each token (internal representation) as follows: 
+elsesym = 1, identsym = 2, numbersym = 3, plussym = 4, minussym = 5, multsym = 6,  slashsym = 7, modsym = 8,  eqlsym = 9, neqsym = 10, lessym = 11, leqsym = 12, 
+gtrsym = 13, geqsym = 14, lparentsym = 15, rparentsym = 16, commasym = 17, semicolonsym = 18, periodsym = 19, becomessym = 20, beginsym = 21, endsym = 22, ifsym = 23, thensym = 24, whilesym = 25, dosym = 26, callsym = 27, constsym = 28, varsym = 29, procsym = 30, writesym = 31, readsym = 32, addassignsym = 33, subassignsym = 34, timesassignsym = 35,
+divassignsym = 36, modassignsym = 37.
+
+Reserved Words: const, var, procedure, call, begin, end, if, then, else, while, do, read, write.
+Special Symbols: ‘+’, ‘-‘, ‘*’, ‘/’, ‘%’, ‘(‘, ‘)’, ‘:=’, ’,’ , ‘.’,  ‘;’ ,
+’=’ , ‘ <’, ‘>’, ‘<=‘, ‘>=‘, ‘!=‘, '+=', '-=', '*=', '/=', '%='.
+Identifiers: identsym = letter (letter | digit)* 
+Numbers: numbersym = (digit)+
+Invisible Characters: tab, white spaces, newline
+Comments denoted by: /* . . .   */
